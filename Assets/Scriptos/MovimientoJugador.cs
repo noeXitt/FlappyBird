@@ -27,4 +27,9 @@ public class MovimientoJugador : MonoBehaviour
         Debug.Log("Click");
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        AdministradorJuego.Instance.FinishGame();
+    }
+
 }        
