@@ -11,7 +11,8 @@ public class ControladorPuntos : MonoBehaviour
 
 
     [SerializeField] int puntosActuales = 0;
-
+    [SerializeField] int puntajeFinal = 0;
+    [SerializeField] int puntajeMaximo = 0;
 
     private void Awake()
     {
@@ -26,10 +27,24 @@ public class ControladorPuntos : MonoBehaviour
 
     }
 
+    private void Start()
+    {
+        puntajeMaximo = PlayerPrefs.GetInt("PuntajeMaximo");
+    }
+
     public void SumarPunto()
     {
         puntosActuales++;
         PuntajeActualizadoEVENTO?.Invoke(puntosActuales);
+
+        puntajeFinal = puntosActuales;
+
+        if (puntosActuales > puntajeMaximo)
+        {
+            puntajeMaximo = puntosActuales;
+            PlayerPrefs.SetInt("PuntajeMaximo", puntajeMaximo);
+        }
+
     }
 
 
