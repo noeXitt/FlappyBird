@@ -3623,6 +3623,7 @@ GameObject:
   - component: {fileID: 1358038521}
   - component: {fileID: 1358038520}
   - component: {fileID: 1358038522}
+  - component: {fileID: 1358038523}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3671,7 +3672,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 1805995954, guid: d64474b8bd0c2c04a9c88b43a499e052, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3691,8 +3692,8 @@ Transform:
   m_GameObject: {fileID: 1358038517}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5399, y: 0.5399, z: 0.5399}
+  m_LocalPosition: {x: 0.01, y: 0.03, z: 0}
+  m_LocalScale: {x: 4.1287274, y: 4.1287274, z: 4.1287274}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3769,9 +3770,30 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.0107100345}
   serializedVersion: 2
-  m_Radius: 0.45
+  m_Radius: 0.06670169
+--- !u!95 &1358038523
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358038517}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1395556085
 GameObject:
   m_ObjectHideFlags: 0
@@ -4529,7 +4551,7 @@ GameObject:
   - component: {fileID: 1625094049}
   - component: {fileID: 1625094048}
   m_Layer: 0
-  m_Name: Chunk1 (1)
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4547,7 +4569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0792cc4d9b90724ba1d60adae5413cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: {x: 0.5, y: 0}
+  velocidad: {x: 0.1, y: 0}
 --- !u!212 &1625094049
 SpriteRenderer:
   m_ObjectHideFlags: 0
