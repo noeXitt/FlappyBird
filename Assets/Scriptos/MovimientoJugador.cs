@@ -5,12 +5,14 @@ using UnityEngine;
 public class MovimientoJugador : MonoBehaviour
 {
     Rigidbody2D rigid;
+    Animator anim;
     public float fuerzaSalto;
 
 
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
     void Update()
     {
@@ -24,6 +26,7 @@ public class MovimientoJugador : MonoBehaviour
     public void Saltar()
     {
         rigid.velocity = new Vector2(0, fuerzaSalto);
+        anim.SetTrigger("Jumping");
         Debug.Log("Click");
     }
 
